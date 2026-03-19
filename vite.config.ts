@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: '/mobile-plan-simulator/',
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -32,8 +32,8 @@ export default defineConfig(({ mode }) => {
             background_color: '#ffffff',
             display: 'standalone',
             orientation: 'portrait',
-            start_url: '/mobile-plan-simulator/',
-            scope: '/mobile-plan-simulator/',
+            start_url: './',
+            scope: './',
             icons: [
               {
                 src: 'icon-192x192.png',

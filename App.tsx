@@ -40,11 +40,11 @@ export default function App() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // 後方互換性のためsavedDevicesがない場合は空配列を追加
-        if (!parsed.savedDevices) {
-          parsed.savedDevices = [];
-        }
-        setMasterData(parsed);
+        setMasterData({
+          plans: parsed.plans && parsed.plans.length > 0 ? parsed.plans : DEFAULT_PLANS,
+          discountAmounts: parsed.discountAmounts || DEFAULT_DISCOUNT_AMOUNTS as any,
+          savedDevices: parsed.savedDevices || []
+        });
       } catch (e) {
         console.error("Failed to parse master data", e);
       }
