@@ -42,7 +42,7 @@ export const ExportPreviewModal: React.FC<Props> = ({ stateA, stateB, isCompareM
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 pt-[calc(env(safe-area-inset-top)+1rem)] pb-[calc(env(safe-area-inset-bottom)+1rem)]">
       <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
         <div className="flex justify-between items-center p-4 border-b border-gray-100">
           <h2 className="font-black text-gray-800 flex items-center gap-2">

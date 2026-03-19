@@ -102,7 +102,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col font-sans text-gray-900 selection:bg-red-100 selection:text-red-900">
       {/* HEADER */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40 px-4 py-3 sm:px-6 shadow-sm">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-40 px-4 pb-3 pt-[calc(env(safe-area-inset-top)+0.75rem)] sm:px-6 shadow-sm">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
              <div className="w-2 h-8 bg-primary rounded-full"></div>
@@ -255,7 +255,7 @@ const SettingsModal: React.FC<{
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-2 sm:p-6 backdrop-blur-md transition-all duration-300">
+    <div className="fixed inset-0 bg-black/70 z-[100] flex items-center justify-center p-2 pt-[calc(env(safe-area-inset-top)+0.5rem)] pb-[calc(env(safe-area-inset-bottom)+0.5rem)] sm:p-6 backdrop-blur-md transition-all duration-300">
       <div className="bg-white rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col shadow-2xl border border-white/20">
         <div className="px-6 py-5 border-b flex justify-between items-center bg-gray-50/80">
           <h2 className="font-black text-xl flex items-center gap-2 text-gray-800 tracking-tight">
